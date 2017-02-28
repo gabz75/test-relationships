@@ -1,0 +1,14 @@
+<h1>Dashboard</h1>
+
+<ul>
+{{#each model as |car|}}
+  <li>
+    {{#link-to 'profile' car.user.id}}Profile for {{car.user.firstName}}{{/link-to}}
+    {{#link-to 'dashboard.nested-profile' car.user.id}}Nested Profile for {{car.user.firstName}}{{/link-to}}
+  </li>
+{{/each}}
+</ul>
+
+<hr>
+
+{{outlet}}

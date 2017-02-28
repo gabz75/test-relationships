@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('dashboard', { path: '/' }, function() {
+    this.route('nested-profile', { path: '/nested-profile/:userID' });
+  });
+  this.route('profile', { path: '/profile/:userID' });
 });
 
 export default Router;
